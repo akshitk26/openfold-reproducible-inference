@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.snakemake/
+
+# Downloaded artifacts: document these in inputs/MANIFEST.md instead.
+artifacts/
+data/
+results/*
+!results/README.md
+evidence/*
+!evidence/README.md
+
+# Local environments and Python files.
+.conda/
+.venv/
+__pycache__/
+*.py[cod]
