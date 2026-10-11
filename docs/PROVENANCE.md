@@ -29,7 +29,7 @@
 | item | value | source |
 |---|---|---|
 | query id | `6KWC_1` | fasta header |
-| fasta sha-256 | `evidence/checksums.txt` | ICE record |
+| fasta sha-256 | `evidence/input-sha256.txt` | repository record |
 | alignment source | openfold `examples/monomer/alignments/6KWC_1` | pinned source clone |
 | alignment selection | MSA files without `hhsearch_output.hhr` | `artifacts/alignments_no_templates/6KWC_1` |
 | experimental reference | `6KWC` chain `A` | RCSB PDB |

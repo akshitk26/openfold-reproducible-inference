@@ -31,9 +31,10 @@ dependencies:
   - bioconda::hmmer
   - bioconda::hhsuite
   - bioconda::kalign2
-  - pytorch::pytorch=2.5
+  - pytorch::pytorch=2.5.1
   - pytorch::pytorch-cuda=12.4
   - pip:
       - deepspeed==0.14.5
       - dm-tree==0.1.6
-      - git+https://github.com/NVIDIA/dllogger.git
+      - cuda-python==12.4.0
+      - git+https://github.com/NVIDIA/dllogger.git@0478734ff7be75adde8d160e04872664d1c62e5f

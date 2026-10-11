@@ -1,16 +1,10 @@
 # evidence
 
-files from the actual cluster run.
-
-| file | contents | purpose |
-|---|---|---|
-| `platform.txt` | host, gpu, modules, software versions | cluster environment |
-| `smoke-test.log` | setup check output | openfold, cuda, and path check |
-| `pip-freeze.txt` | Python package versions | Python environment |
-| `conda-explicit.txt` | conda package versions | conda environment |
-| `checksums.txt` | input and checkpoint sha-256 values | artifact identity |
-| `slurm-<jobid>.out` | standard job output | scheduler and program output |
-| `slurm-<jobid>.err` | standard job error output | scheduler and program errors |
-| `inference-<jobid>.log` | inference terminal output | model load, input, output, runtime |
-| `run-metadata.md` | job id, resources, start/end time, gpu memory | run summary |
-| `validation.log` | pdb validation output | output file checks |
+| file | record |
+|---|---|
+| `conda-explicit.txt` | completed conda package set |
+| `openfold-commit.txt` | openfold source commit |
+| `input-sha256.txt`, `checkpoint-sha256.txt`, `reference-sha256.txt`, `template-mmcif-sha256.txt`, `output-sha256.txt` | artifact identity |
+| `platform-6190401.txt`, `gpu-memory-6190401.csv`, `slurm-6190401.out` | completed batch job |
+| `smoke-test.log`, `validation-6190401.log`, `structure-comparison.log` | validation |
+| `slurm-6189984.err`, `slurm-6190271.err` | batch setup failures |

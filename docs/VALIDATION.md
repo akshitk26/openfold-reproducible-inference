@@ -28,3 +28,5 @@
 | sequence identity | 100.00% |
 | ca rmsd | 1.154 angstrom |
 | output record | `evidence/structure-comparison.log` |
+
+the complete sequence match, mean predicted confidence of 96.66, and 1.154 angstrom ca rmsd support the predicted structure
