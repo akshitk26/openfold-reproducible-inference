@@ -1,0 +1,21 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-11-2026 17:34:28
+Job ID:    6189984
+User ID:   akumar3097
+Account:   coc
+Job name:  openfold-6KWC1
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+---------------------------------------
+Begin Slurm Epilog: Oct-11-2026 17:34:35
+Job ID:        6189984
+User ID:       akumar3097
+Account:       coc
+Job name:      openfold-6KWC1
+Resources:     cpu=4,gres/gpu:rtx_6000=1,mem=32G,node=1
+Rsrc Used:     cput=00:00:32,vmem=0,walltime=00:00:08,mem=43196K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-01-005-5-0
+---------------------------------------
