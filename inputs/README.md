@@ -1,3 +1,3 @@
 # inputs
 
-`6KWC_1.fasta` comes from openfold's monomer example at the pinned source commit.
+`6KWC_1.fasta` comes from the openfold monomer example at `v2.2.0`.

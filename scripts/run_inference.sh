@@ -9,6 +9,8 @@ fi
 # shellcheck disable=SC1091
 source .env
 
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib/python3.10/site-packages/torch/lib:$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+
 mkdir -p "$OUTPUT_DIR"
 
 cd "$OPENFOLD_DIR"

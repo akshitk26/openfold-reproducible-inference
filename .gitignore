@@ -6,9 +6,14 @@
 artifacts/
 data/
 results/*
-!results/README.md
+!results/run-001/
+!results/run-001/timings.json
+!results/run-001/predictions/
+!results/run-001/predictions/6KWC_1_model_3_ptm_unrelaxed.pdb
 evidence/*
-!evidence/README.md
+!evidence/*.log
+!evidence/*.txt
+!evidence/*.json
 
 # Local environments and Python files.
 .conda/

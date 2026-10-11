@@ -4,16 +4,17 @@ artifact source, version, checksum, and local location.
 
 | artifact | value | source | version / checksum | local path |
 |---|---|---|---|---|
-| openfold source | `aqlaboratory/openfold` | https://github.com/aqlaboratory/openfold | commit: `be2ec1841f16c966c65ae0e7599ebbadc725757d` | `$OPENFOLD_DIR` |
-| query fasta | `6KWC_1` | openfold `examples/monomer/fasta_dir/6kwc.fasta` | git blob: `4fbcc4f33528dc49d7c13f4f7734123ac5637598`; sha-256: `pending` | `inputs/6KWC_1.fasta` |
-| precomputed alignments | `6KWC_1` | openfold `examples/monomer/alignments` | source commit + directory sha-256: `pending` | `$ALIGNMENT_DIR/6KWC_1` |
-| checkpoint | `finetuning_no_templ_ptm_1.pt` | `s3://openfold/openfold_params/` | file size + sha-256: `pending` | `$CHECKPOINT_PATH` |
-| template mmcif directory | empty | local directory | n/a | `$TEMPLATE_MMCIF_DIR` |
-| reference structure | `6KWC` chain `pending` | RCSB PDB | url + sha-256: `pending` | `inputs/reference/` |
+| openfold source | `aqlaboratory/openfold` | https://github.com/aqlaboratory/openfold | `v2.2.0`, `e938c184a291bf053af3b14c1e3e8bb29aee57e2` | `$OPENFOLD_DIR` |
+| query fasta | `6KWC_1` | openfold `examples/monomer/fasta_dir/6kwc.fasta` | sha-256 in `evidence/checksums.txt` | `inputs/6KWC_1.fasta` |
+| precomputed MSA files | `6KWC_1` | openfold `examples/monomer/alignments` | `mgnify_hits.sto`, `uniref90_hits.sto` | `$ALIGNMENT_DIR/6KWC_1` |
+| template-hit file | `hhsearch_output.hhr` | openfold example alignment directory | excluded from template-free alignment copy | not used |
+| checkpoint | `finetuning_no_templ_ptm_1.pt` | `s3://openfold/openfold_params/finetuning_no_templ_ptm_1.pt` | 373259620 bytes; sha-256 in `evidence/checkpoint-sha256.txt` | `$CHECKPOINT_PATH` |
+| template mmcif files | `1h1a`, `1te1`, `2dfb`, `3akq` | https://files.rcsb.org/download/ | sha-256 in `evidence/template-mmcif-sha256.txt` | `$TEMPLATE_MMCIF_DIR` |
+| reference structure | `6KWC` chain `A` | https://files.rcsb.org/download/6KWC.pdb | sha-256 in `evidence/reference-sha256.txt` | `inputs/reference/6kwc.pdb` |
 
 ## checksums
 
-`sha256sum` and `shasum -a 256` create file checksums. `evidence/checksums.txt` stores the output.
+`evidence/` contains the ICE checksum records.
 
 ```bash
 sha256sum FILE

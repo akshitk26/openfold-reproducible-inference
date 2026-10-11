@@ -9,6 +9,8 @@ fi
 # shellcheck disable=SC1091
 source .env
 
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib/python3.10/site-packages/torch/lib:$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+
 for required_path in "$OPENFOLD_DIR" "$FASTA_DIR" "$ALIGNMENT_DIR" "$TEMPLATE_MMCIF_DIR" "$CHECKPOINT_PATH"; do
   if [[ ! -e "$required_path" ]]; then
     echo "missing path: $required_path"

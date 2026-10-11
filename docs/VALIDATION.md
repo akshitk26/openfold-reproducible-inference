@@ -2,32 +2,26 @@
 
 ## smoke test
 
-the smoke test checks the openfold import, cuda access, and required paths before inference.
-
 | item | expected | observed | evidence |
 |---|---|---|---|
-| openfold import | module path | `pending` | `evidence/smoke-test.log` |
-| cuda | available gpu | `pending` | `evidence/smoke-test.log` |
-| input paths | fasta, alignments, checkpoint, mmcif directory | `pending` | `evidence/smoke-test.log` |
+| openfold import | module path | openfold `v2.2.0` egg | `evidence/smoke-test.log` |
+| cuda | available gpu | Tesla V100-PCIE-16GB | `evidence/smoke-test.log` |
+| input paths | fasta, alignments, checkpoint, mmcif directory | available | `evidence/smoke-test.log` |
 
 ## pdb output
 
-the pdb check confirms a non-empty coordinate file with atom records and predicted residues.
-
 | item | expected | observed | evidence |
 |---|---|---|---|
-| pdb file | non-empty `.pdb` file | `pending` | `evidence/validation.log` |
-| atom records | one or more | `pending` | `evidence/validation.log` |
-| residue count | close to fasta length | `pending` | `evidence/validation.log` |
+| pdb file | non-empty `.pdb` file | 120528 bytes | `evidence/validation.log` |
+| atom records | one or more | 1482 | `evidence/validation.log` |
+| residue count | fasta length | 191 / 191 | `evidence/validation.log` |
+| mean predicted confidence | 0 to 100 | 96.66 | `evidence/validation.log` |
 
 ## scientific check
 
-mean plddt measures per-residue confidence. tm-score or rmsd compares the predicted structure with an experimental reference.
-
 | item | value |
 |---|---|
-| method | tm-score, rmsd, or mean plddt |
-| command or tool | `pending` |
-| observed value | `pending` |
-| reference structure | `pending` |
-| result note | `pending` |
+| method | ca rmsd after sequence alignment and rigid-body superposition |
+| command | `scripts/compare_ca_rmsd.py` |
+| reference structure | RCSB PDB `6KWC`, chain `A` |
+| output record | `evidence/structure-comparison.log` |
