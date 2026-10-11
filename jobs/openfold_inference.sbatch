@@ -11,7 +11,7 @@
 #SBATCH --output=evidence/slurm-%j.out
 #SBATCH --error=evidence/slurm-%j.err
 
-set -euo pipefail
+set -eo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$PROJECT_DIR"
@@ -23,6 +23,7 @@ module load anaconda3
 
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate openfold-repro
+set -u
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib/python3.10/site-packages/torch/lib:$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
 
 mkdir -p evidence
