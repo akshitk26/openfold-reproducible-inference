@@ -10,8 +10,9 @@
 | Python | 3.10 | `environment.yml` |
 | PyTorch | 2.5.1 | `evidence/conda-explicit.txt` |
 | CUDA runtime | 12.4 | `evidence/conda-explicit.txt` |
-| gpu model | Tesla V100-PCIE-16GB | `evidence/smoke-test.log` |
-| cluster node | `atl1-1-02-011-31-0` | successful interactive run |
+| gpu model | RTX 6000 | `evidence/platform-6190401.txt` |
+| slurm allocation | 1 gpu, 4 cpus, 32 gb ram | `evidence/slurm-6190401.out` |
+| batch job | `6190401`, completed | `evidence/slurm-6190401.out` |
 
 ## model
 

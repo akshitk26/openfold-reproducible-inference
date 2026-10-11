@@ -17,9 +17,11 @@ i reproduce one openfold monomer inference for `6KWC_1` on ICE.
 | template mode | template-free |
 | seed | `0` |
 | relaxation | off |
-| gpu | Tesla V100-PCIE-16GB |
-| inference time | 19.56 seconds |
-| elapsed time | 39.52 seconds |
+| batch job | `6190401` |
+| gpu | RTX 6000 |
+| inference time | 26.21 seconds |
+| batch elapsed time | 78 seconds |
+| peak gpu memory | 6433 MiB |
 | output | `results/run-001/predictions/6KWC_1_model_3_ptm_unrelaxed.pdb` |
 | predicted residues | 191 |
 | mean predicted confidence | 96.66 |
@@ -51,6 +53,7 @@ fasta + precomputed alignments + checkpoint
 | `jobs/openfold_inference.sbatch` | slurm resource request and job command |
 | `docs/CLUSTER_COMMANDS.md` | ICE environment, artifacts, inference, and validation |
 | `docs/PROVENANCE.md` | software, model, input, and reference values |
+| `docs/EXECUTION_RECORD.md` | completed interactive and batch runs |
 | `docs/VALIDATION.md` | smoke test and result values |
 | `evidence/` | logs, package lists, checksums, and run metadata |
 | `results/` | predicted structure and confidence output |

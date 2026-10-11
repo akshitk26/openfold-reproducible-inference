@@ -24,4 +24,7 @@
 | method | ca rmsd after sequence alignment and rigid-body superposition |
 | command | `scripts/compare_ca_rmsd.py` |
 | reference structure | RCSB PDB `6KWC`, chain `A` |
+| aligned residues | 191 |
+| sequence identity | 100.00% |
+| ca rmsd | 1.154 angstrom |
 | output record | `evidence/structure-comparison.log` |
