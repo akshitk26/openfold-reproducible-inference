@@ -13,8 +13,7 @@
 
 set -eo pipefail
 
-PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-cd "$PROJECT_DIR"
+cd "${SLURM_SUBMIT_DIR:?}"
 
 module purge
 module load gcc/12.3.0
